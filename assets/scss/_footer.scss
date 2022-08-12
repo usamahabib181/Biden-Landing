@@ -1,0 +1,42 @@
+@use "common" as *;
+
+.footer-area{
+  background: #039BE5;
+}
+
+.footer-text{
+  p{
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 20px;
+    a{
+      font-size: 15px;
+      color: #fff;
+    }
+  }
+}
+
+.footer-thumb{
+  img{
+    display: inline-block;
+    margin-right: 30px;
+    @include mq(xs){
+      margin-right: 10px;
+      width: 40px;
+    }
+  }
+}
+
+.footer-social {
+  a {
+    display: inline-block;
+    font-size: 38px;
+    color: #fff;
+    margin-left: 30px;
+    @include mq(xs){
+      font-size: 35px;
+      margin-left: 10px;
+    }
+  }
+}
+

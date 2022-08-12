@@ -1,0 +1,104 @@
+@use "common" as *;
+
+.header-area {
+  background: #039BE5;
+  padding: 10px 0;
+}
+
+.main-menu {
+  display: inline-block;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+
+      a {
+        font-size: 20px;
+        color: #fff;
+        padding: 10px 25px;
+        @include mq(xl) {
+          padding: 10px 12px;
+        }
+
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+  }
+}
+
+.header-btn {
+  display: inline-block;
+  margin-left: 20px;
+  @include mq(xs) {
+    margin-left: 0;
+    width: 113px;
+  }
+
+  a {
+    display: inline-block;
+    position: relative;
+
+    &:hover {
+      .img-1 {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .img-2 {
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+      }
+    }
+
+    .img-1 {
+      opacity: 1;
+      visibility: visible;
+      @include transition(0.3s);
+    }
+
+    .img-2 {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0;
+      visibility: hidden;
+      @include transition(0.3s);
+    }
+  }
+}
+
+
+.open-mobile-menu {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: bottom;
+  margin-left: 26px;
+  @include mq(xs) {
+    height: 40px;
+    line-height: 48px;
+    margin-left: 10px;
+  }
+
+  a {
+    color: #fff;
+    font-size: 40px;
+    display: inline-block;
+    @include mq(xs) {
+      color: #fff;
+      font-size: 30px;
+      display: inline-block;
+    }
+  }
+}
+
